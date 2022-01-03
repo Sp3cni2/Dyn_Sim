@@ -6,7 +6,7 @@ from prototype.Classes.DataContainers.containers import Vector6DOF
 
 @dataclass(slots=True)
 class Generic3DDynamic(ABC):
-    """ Abstract of object undergoing physics simulation """
+    """ Abstract of object undergoing dyamics simulation """
 
     States: Vector6DOF = field(default_factory=Vector6DOF)  # states object is in now
     d_States: Vector6DOF = field(default_factory=Vector6DOF)  # change in states object will undergo on end of step
