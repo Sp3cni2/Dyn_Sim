@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List, Callable
 from prototype.Classes.DataContainers.TensorInterface import Vector
-from SimulatorScheme import ScenarioABC
+from simulator.SimulatorInterface import ScenarioInterface
 
 
 @dataclass
@@ -20,10 +20,6 @@ class BasicSim(ScenarioABC):
     def run(self, sim_setup):
         n = 0
         while n <= sim_setup.sim_end:
-
-            sim_setup.internals(...)  # TODO: Define methods to solve m(t), I(t) etc.
-            sim_setup.forces(...)  # TODO: Define methods to solve F(t)
-            sim_setup.torques(...)  # TODO: Define methods to solve Tau(t)
 
             kws = {
                 "F": 0.0,
