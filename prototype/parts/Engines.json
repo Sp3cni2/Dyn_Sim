@@ -1,0 +1,32 @@
+{"engines":
+	[
+		{
+			"name": "AJ-45",
+			"icon_ref": "icon_file",
+			"model_ref": "3D model_file",
+			"texture_ref": "texture_file",
+			"origin": {"x":0.0, "y":0.0, "z":0.0},
+			"anchor": {"x":2.0, "y":0.0, "z":0.0},
+			"dimensions": {"x":4.0, "y":2.0, "z":2.0},
+			"cg_position":{"x":0.0, "y":0.0, "z":0.0},
+			"mass": 4050.0,
+			"fuel_mix": "Kerosene-LOX",
+			"ratio": 2.60,
+			"flow_rate": 11000.0,
+			"design_pressure": 101325.15
+		},
+		{
+			"name": "RS-25",
+			"icon_ref": "icon_file",
+			"model_ref": "3D model_file",
+			"texture_ref": "texture_file",
+			"origin": {"x":0.0, "y":0.0, "z":0.0},
+			"anchor": {"x":1.95, "y":0.0, "z":0.0},
+			"dimensions": {"x":3.9, "y":2.4, "z":2.4},
+			"cg_position":{"x":0.0, "y":0.0, "z":0.0},
+			"mass": 3177.00,
+			"fuel_mix": "LH2-LOX",
+			"ratio": 6.03,
+			"flow_rate": 514.49,
+			"design_pressure": 101325.15}]
+}
