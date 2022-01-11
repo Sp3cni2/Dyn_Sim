@@ -5,7 +5,7 @@ from simulator.SimulatorInterface import ScenarioInterface
 
 
 @dataclass
-class BasicSim(ScenarioABC):
+class BasicSim(ScenarioInterface):
 
     """Defines a standard N step simulation."""
 
