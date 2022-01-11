@@ -1,0 +1,81 @@
+{"Fuels":
+	[
+		{
+			"name": "Kerosene-LOX x225",
+			"ratio": 2.25,
+			"icon_ref": "icon.png",
+			"density_oxid":1.14,
+			"density_reduc":0.749,
+			"k": 1.22,
+			"Mol": 21.2,
+			"adiabatic_T":3540,
+			"adiabatic_P":68.0
+		},
+		{
+			"name": "Kerosene-LOX x260",
+			"ratio": 2.60,
+			"icon_ref": "icon.png",
+			"density_oxid":1.14,
+			"density_reduc":0.749,
+			"k": 1.21,
+			"Mol": 22.9,
+			"adiabatic_T":3700,
+			"adiabatic_P":68.0
+		},
+		{
+			"name": "LH2-LOX x500",
+			"ratio": 5.00,
+			"icon_ref": "icon.png",
+			"density_oxid":1.14,
+			"density_reduc":0.071,
+			"k": 1.21,
+			"Mol": 11.8,
+			"adiabatic_T":3330,
+			"adiabatic_P":68.0
+		},
+		{
+			"name": "LH2-LOX x600",
+			"ratio": 6.00,
+			"icon_ref": "icon.png",
+			"density_oxid":1.14,
+			"density_reduc":0.071,
+			"k": 1.20,
+			"Mol": 13.3,
+			"adiabatic_T":3550,
+			"adiabatic_P":68.0
+		},
+		{
+			"name": "DMH-N2O4 x210",
+			"ratio": 2.10,
+			"icon_ref": "icon.png",
+			"density_oxid":1.45,
+			"density_reduc":0.791,
+			"k": 1.23,
+			"Mol": 21.7,
+			"adiabatic_T":3320,
+			"adiabatic_P":68.0
+		},
+		{
+			"name": "DMH-N2O4 x240",
+			"ratio": 2.40,
+			"icon_ref": "icon.png",
+			"density_oxid":1.45,
+			"density_reduc":0.791,
+			"k": 1.22,
+			"Mol": 23.7,
+			"adiabatic_T":3480,
+			"adiabatic_P":68.0
+		},
+		{
+			"name": "DMH-RFNA x270",
+			"ratio": 2.70,
+			"icon_ref": "icon.png",
+			"density_oxid":1.55,
+			"density_reduc":0.791,
+			"k": 1.21,
+			"Mol": 22.5,
+			"adiabatic_T":3010,
+			"adiabatic_P":68.0
+		}
+	]
+}

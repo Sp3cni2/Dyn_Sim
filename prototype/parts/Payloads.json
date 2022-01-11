@@ -1,0 +1,22 @@
+{"payloads":
+	[
+		{
+			"name": "n1",
+			"origin": {"x":0.0, "y":0.0, "z":0.0},
+			"anchor": {"x":2.0, "y":0.0, "z":0.0},
+			"dimensions": {"x":4.0, "y":4.0, "z":4.0},
+			"cg_position":{"x":0.0, "y":0.0, "z":0.0},
+			"mass": 100.0,
+			"shape": "cuboid"
+		},
+		{
+			"name": "n12",
+			"origin": {"x":0.0, "y":0.0, "z":0.0},
+			"anchor": {"x":2.0, "y":0.0, "z":0.0},
+			"dimensions": {"x":4.0, "y":4.0, "z":4.0},
+			"cg_position":{"x":0.0, "y":0.0, "z":0.0},
+			"mass": 1200.00,
+			"shape": "sphere"
+		}
+	]
+}
