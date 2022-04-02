@@ -27,7 +27,7 @@ class BasicSim(ScenarioInterface):
                 "I": 1.0,
                 "G": 0.0,
                 "dt": 0.1,
-                "mass": 1.0}
+                "mass": 1.0} # these arguments will undergo changes over time.
             tn = 0.0  # don't use this
             self.output.append(self.solver(self.eom, tn, self.state_vector, **kws))
             n += sim_setup.sim_step

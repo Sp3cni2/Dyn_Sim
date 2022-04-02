@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 from copy import copy
-
+from typing import List, Dict
 
 @dataclass(slots=True)
 class Tensor(ABC):
@@ -42,6 +42,7 @@ class InertiaTensor(Tensor):
         [self.__setattr__(key, None) for key in self.__slots__]
 
     def update(self, other) -> None:
+
         if isinstance(other, list):
             [self.__setattr__(key, other) for (key, other) in zip(self.__slots__, other)]
             return

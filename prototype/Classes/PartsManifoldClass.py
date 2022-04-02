@@ -10,10 +10,10 @@ from prototype.Classes.methods.PartsManifoldMethods import manifold_shape, manif
 class PartManifoldClass:
 
     """A manifold to store parts that can be equal distributed around central axis"""
-    anchor: Vector3D = field(default_factory=Vector3D)  # relative to parent
-    dimensions: Vector3D = field(default_factory=Vector3D)  # relative to parent
-    cg_position: Vector3D = field(default_factory=Vector3D)  # relative to parent
-    mass: float = field(default=None)
+    anchor: Vector3D = field(default_factory=Vector3D, repr=False)  # relative to parent
+    dimensions: Vector3D = field(default_factory=Vector3D, repr=False)  # relative to parent
+    cg_position: Vector3D = field(default_factory=Vector3D, repr=False)  # relative to parent
+    mass: float = field(default=None, repr=False)
 
     PartsList: List = field(default_factory=List)
 

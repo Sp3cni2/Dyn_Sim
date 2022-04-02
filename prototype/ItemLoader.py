@@ -6,10 +6,11 @@ from prototype.Builders.ManifoldBuilder import ManifoldBuilder
 
 from prototype.Classes.FuselageClass import FuselageClass
 
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
+import logging
 
 if __name__ == "__main__":
+
+    logging.debug("just a test")
 
     #  globals initialization stage:
 
@@ -28,6 +29,6 @@ if __name__ == "__main__":
 
     ManifoldEngines = MB.build([EB.get_item("RS-25"), EB.get_item("RS-25"), EB.get_item("RS-25")])
 
-    print(ManifoldEngines.anchor)
+    print(ManifoldEngines)
 
     pass

@@ -3,27 +3,30 @@ from abc import ABC, abstractmethod
 
 class ScenarioInterface(ABC):
 
-    """Simulate our rocket in some scenario."""
+    """Interfacing of the simulation scenario."""
 
     @abstractmethod
     def run(self, sim_type):
-        pass
+        """Runs simulation."""
+        raise NotImplementedError
 
     @abstractmethod
-    def reset(self):
-        pass
+    def reset(self) -> None:
+        """Resets simulation to initial state."""
+        raise NotImplementedError
 
     @abstractmethod
-    def set_model(self, model):
-        """Sets initial model variables."""
-        pass
+    def set_model(self, model) -> None:
+        """Sets initial model conditions."""
+        raise NotImplementedError
 
     @abstractmethod
-    def reset_model(self):
-        """Used to set model variables to states at beginning of simulation."""
-        pass
+    def reset_model(self) -> None:
+        """Resets model states to initial conditions."""
+        raise NotImplementedError
 
     @abstractmethod
-    def _clear_model(self):
-        """Clears everything about model."""
-        pass
+    def _clear_model(self) -> None:
+        """Clears everything about model. Basically deletes any references of model in simulation.
+        At least that is the concept right now."""
+        raise NotImplementedError

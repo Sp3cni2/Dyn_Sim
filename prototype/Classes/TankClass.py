@@ -8,18 +8,18 @@ from prototype.Classes.FuelClass import FuelClass
 class TankClass:
 
     name: str = field(default=None)
-    shape: str = field(default=None)
-    mass_empty: float = field(default=None)
-    volume_efficiency: float = field(default=None)
-    available_fuel: float = field(default=None, init=False)
-    available_oxidizer: float = field(default=None, init=False)
+    shape: str = field(default=None, repr=False)
+    mass_empty: float = field(default=None, repr=False)
+    volume_efficiency: float = field(default=None, repr=False)
+    available_fuel: float = field(default=None, init=False, repr=False)
+    available_oxidizer: float = field(default=None, init=False, repr=False)
 
     Fuel: FuelClass = field(default_factory=FuelClass)
 
-    origin: Vector3D = field(default_factory=Vector3D)  # this is where object origin is placed
-    anchor: Vector3D = field(default_factory=Vector3D)  # relative to parent
-    dimensions: Vector3D = field(default_factory=Vector3D)
-    cg_position: CGVector3D = field(default_factory=CGVector3D)
+    origin: Vector3D = field(default_factory=Vector3D, repr=False)  # this is where object origin is placed
+    anchor: Vector3D = field(default_factory=Vector3D, repr=False)  # relative to parent
+    dimensions: Vector3D = field(default_factory=Vector3D, repr=False)
+    cg_position: CGVector3D = field(default_factory=CGVector3D, repr=False)
 
     @property
     def offset(self) -> Vector3D:

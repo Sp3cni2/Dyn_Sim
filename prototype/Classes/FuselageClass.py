@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import List
 
-from prototype.Classes.DataContainers.containers import Vector3D, CGVector3D
+from prototype.Classes.DataContainers.containers import Vector3D, CGVector3D, InertiaTensor3D
 from prototype.Classes.PartsManifoldClass import PartManifoldClass
 
 
@@ -13,6 +13,7 @@ class FuselageClass:
     anchor: Vector3D = field(default_factory=Vector3D)
     dimensions: Vector3D = field(default_factory=Vector3D)  # sum of its parts
     cg_position: CGVector3D = field(default_factory=CGVector3D)
+    inertia_tensor: InertiaTensor3D = field(default_factory=InertiaTensor3D)
     mass: float = field(default=None)  # sum of its parts
 
     cross_area_front: float = field(default=None)
@@ -20,7 +21,7 @@ class FuselageClass:
     cross_area_top: float = field(default=None)
     center_of_pressure: Vector3D = field(default_factory=Vector3D)
 
-    # TODO: This or an unknown range of Manifold classes...
+    # This or an unknown range of Manifold classes...
     # this seems a bit better for sanity, manifold can be anything
     # but manifolds are going to be necessary
 

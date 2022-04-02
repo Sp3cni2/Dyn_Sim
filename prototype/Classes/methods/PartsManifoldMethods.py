@@ -10,7 +10,7 @@ def manifold_shape(cls, rotation=0.0) -> None:
     segment = np.pi * 2 / n
     if not n < 2:
         # takes widest element in manifold for separation radius
-        # TODO: consider allowing custom radius
+        # consider allowing custom radius
         radius = max([part.dimensions.z for part in cls.PartsList])
     else:
         radius = 0.0
@@ -24,7 +24,7 @@ def manifold_shape(cls, rotation=0.0) -> None:
 def manifold_dimensions(cls):
 
     """Finds dimensions of manifold."""
-    # TODO: correctly sum dimensions of parts.
+    # correctly sum dimensions of parts.
 
     cls.dimensions.x = max([dims.dimensions.x for dims in cls.PartsList])
     cls.dimensions.y = max([dims.dimensions.y for dims in cls.PartsList])

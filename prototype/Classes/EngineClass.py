@@ -8,29 +8,29 @@ from prototype.Classes.methods.engine_methods import engine_init
 @dataclass(slots=True)
 class EngineClass:
     # UI and 3d graphics properties
-    icon_ref: str = field(default=None)
-    model_ref: str = field(default=None)
-    texture_ref: str = field(default=None)
-
-    Tank: TankClass = field(default_factory=TankClass, init=False)
+    icon_ref: str = field(default=None, repr=False)
+    model_ref: str = field(default=None, repr=False)
+    texture_ref: str = field(default=None, repr=False)
 
     name: str = field(default=None)
-    mass: float = field(default=None)
-    fuel_mix: str = field(default=None)
-    flow_rate: float = field(default=None)
-    ratio: float = field(default=None)
-    design_pressure: float = field(default=None)
+    mass: float = field(default=None, repr=False)
+    fuel_mix: str = field(default=None, repr=False)
+    flow_rate: float = field(default=None, repr=False)
+    ratio: float = field(default=None, repr=False)
+    design_pressure: float = field(default=None, repr=False)
 
-    origin: Vector3D = field(default_factory=Vector3D)
-    anchor: Vector3D = field(default_factory=Vector3D)
-    dimensions: Vector3D = field(default_factory=Vector3D)
-    cg_position: CGVector3D = field(default_factory=CGVector3D)
+    fuel_source: TankClass = field(default_factory=TankClass, init=False)
 
-    parent: object = field(default_factory=object)
+    origin: Vector3D = field(default_factory=Vector3D, repr=False)
+    anchor: Vector3D = field(default_factory=Vector3D, repr=False)
+    dimensions: Vector3D = field(default_factory=Vector3D, repr=False)
+    cg_position: CGVector3D = field(default_factory=CGVector3D, repr=False)
+
+    parent_part: object = field(default_factory=object, init=False, repr = False)
 
     # thrust generation properties:
-    Ve: float = field(default=None)
-    Ae: float = field(default=None)
+    Ve: float = field(default=None, repr=False)
+    Ae: float = field(default=None, repr=False)
 
     @property
     def offset(self) -> float:
@@ -60,9 +60,13 @@ class EngineClass:
     def _pressure_part(self, pa: float = 101325.15):
         return self.Ae * (self.Tank.Fuel.adiabatic_P * 101325.15 - pa)
 
-    def connect_tank(self, Tank) -> None:
+    def connect_fuel_source(self, fuel_source) -> None:
         """Assign Tank being drained"""
-        self.Tank = Tank
+        self.fuel_source = fuel_source
+
+    def select_parent_part(self,parent_part: object) -> None:
+        """Assign part engine gets welded onto."""
+        self.parent_part = parent_part
 
     def setup_engine(self, ratio):
         self.Ve, self.Ae = engine_init(self.design_pressure,
